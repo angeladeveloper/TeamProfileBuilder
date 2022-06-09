@@ -1,6 +1,6 @@
 var inquirer = require("inquirer");
 const EmployeeQuestions = require("./lib/employee")
-
+const teamMembers = []
 const confirmString = async (input) => {
   if (input === undefined || null) {
     return 'invalid name'
@@ -12,7 +12,18 @@ const confirmString = async (input) => {
 }
 
 
-inquirer.prompt(EmployeeQuestions)
+inquirer.prompt(EmployeeQuestions).then({
+  type: "input",
+  name: "feedback",
+  message: "Please give us open feedback (optional)",
+  when(answers) {
+    return answers.role === "employee"
+  }
+})
+  .then(res => {
+    teamMembers.push(res)
+    console.log(teamMembers);
+  })
 
 // inquirer.prompt([
 //   {

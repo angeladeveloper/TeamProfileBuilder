@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/angeladeveloper/TeamProfileBuilder#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "inquirer": "^8.2.4",
     "jest": "^28.1.1"
   }
