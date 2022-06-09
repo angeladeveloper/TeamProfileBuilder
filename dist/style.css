@@ -13,7 +13,9 @@ body {
 :root {
   --main-clr: #095056;
   --lightMain-clr: #d9e5d6;
-  --accent-clr: #f7a072;
+  --accent-clr: #9c3700;
+  --boxshadow: 1px 7px 7px rgba(0, 0, 0, 0.196),
+    0px -5px 20px rgba(0, 0, 0, 0.445);
   --main-font: "Source Sans Pro", sans-serif;
 }
 
@@ -21,13 +23,17 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5rem;
+  height: 6rem;
   background-color: var(--main-clr);
   margin-bottom: 1rem;
+  box-shadow: var(--boxshadow);
 }
 
 h1 {
   font-size: 3.8rem;
+  color: white;
+  padding: 1rem 0;
+  line-height: 1.3;
 }
 
 main {
@@ -36,14 +42,20 @@ main {
   align-items: center;
 }
 
+img {
+  width: 2.5rem;
+}
+
 .container {
   margin: auto;
   position: relative;
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  padding: 0 4rem;
 }
 
 svg {
@@ -55,9 +67,9 @@ svg {
 
 .member-card {
   /* background-color: var(--accent-clr); */
-  font-size: 2rem;
-  width: min-content;
-  box-shadow: 1px 10px 10px rgba(91, 0, 0, 0.315),
+  font-size: 1.3rem;
+  width: 30%;
+  box-shadow: 1px 7px 7px rgba(0, 0, 0, 0.196),
     3px 10px 20px rgba(0, 0, 0, 0.088);
   padding: 1rem;
   border-radius: 0.4rem;
@@ -66,18 +78,21 @@ svg {
 
 .card-header {
   position: relative;
-  display: inline-block;
-  height: 5rem;
+  height: max-content;
   background-color: var(--main-clr);
-  padding: 5px, 4px;
+  padding: 4px;
   width: 100%;
   color: white;
-  margin-left: 1rem;
+  font-size: 2rem;
+  border-radius: 3px;
+}
+.card-header img {
+  margin: 0 2px;
 }
 
 .member-card h2 {
   padding: 0.3rem;
-  background-color: var(--main-clr);
+  /* background-color: var(--main-clr); */
 }
 ul {
   margin-top: 1rem;
@@ -94,4 +109,23 @@ li {
   padding: 0.5rem;
   border-radius: 0.2rem;
   color: var(--main-clr);
+  display: block;
 }
+
+li a {
+  text-decoration: none;
+  color: var(--accent-clr);
+  line-height: 1.2;
+}
+li:hover a {
+  background-color: var(--lightMain-clr);
+}
+
+/* 
+li span {
+  display: inline-block;
+}
+
+li img {
+  display: inline-block;
+} */
