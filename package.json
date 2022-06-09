@@ -1,0 +1,23 @@
+{
+  "name": "teamprofilebuilder",
+  "version": "1.0.0",
+  "description": "Profile Builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeladeveloper/TeamProfileBuilder.git"
+  },
+  "author": "Angela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angeladeveloper/TeamProfileBuilder/issues"
+  },
+  "homepage": "https://github.com/angeladeveloper/TeamProfileBuilder#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^28.1.1"
+  }
+}

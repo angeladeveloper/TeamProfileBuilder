@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 16px;
+}
+
+:root {
+  --main-clr: #095056;
+  --lightMain-clr: #d9e5d6;
+  --accent-clr: #f7a072;
+  --main-font: "Source Sans Pro", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: var(--main-clr);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: auto;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+  /* flood-color: #0950564b; */
+}
+
+.member-card {
+  /* background-color: var(--accent-clr); */
+  font-size: 2rem;
+  width: min-content;
+  box-shadow: 1px 10px 10px rgba(91, 0, 0, 0.315),
+    3px 10px 20px rgba(0, 0, 0, 0.088);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+.card-header {
+  position: relative;
+  display: inline-block;
+  height: 5rem;
+  background-color: var(--main-clr);
+  padding: 5px, 4px;
+  width: 100%;
+  color: white;
+  margin-left: 1rem;
+}
+
+.member-card h2 {
+  padding: 0.3rem;
+  background-color: var(--main-clr);
+}
+ul {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* background-color: var(--lightMain-clr); */
+}
+
+li {
+  border-bottom: solid 2px #0950564b;
+  /* box-shadow: 1px 3px 5px rgba(91, 0, 0, 0.144),
+    3px 3px 5px rgba(0, 0, 0, 0.088); */
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  color: var(--main-clr);
+}
