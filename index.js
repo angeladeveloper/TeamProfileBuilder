@@ -1,5 +1,5 @@
 var inquirer = require("inquirer");
-const { EmployeeQuestions } = require("./lib/Employee")
+const { EmployeeQuestions, continueQuestion } = require("./lib/Employee")
 const teamMembers = []
 const confirmString = async (input) => {
   if (input === undefined || null) {
@@ -11,26 +11,31 @@ const confirmString = async (input) => {
   }
 }
 
-
-inquirer.prompt(
-  EmployeeQuestions,
-  // {
-  //   type: "input",
-  //   name: "engineer",
-  //   message: "is this an engineer",
-  //   when(answers) {
-  //     return answers.role === "engineer"
-  //   }
-  // }
-)
-  .then(res => {
+function inquirerPrompts() {
+  inquirer.prompt(EmployeeQuestions,).then(res => {
     teamMembers.push(res)
     console.log(teamMembers);
+    continuePrompt()
   })
+}
 
 
+function continuePrompt() {
+  (inquirer.prompt(continueQuestion))
+    .then(res => {
+      if (res.anotherOne) {
+        console.log(res.anotherOne)
+        inquirerPrompts();
+      } else { console.log('done') }
+    })
 
+}
 
+inquirerPrompts()
+
+// .then(res =>{
+//   if(res.anthoerOne )
+// })
 // inquirer.prompt([
 //   {
 //     name: "managerName",
