@@ -69,7 +69,7 @@ describe('Engineer🛠️', () => {
     })
   })
   describe('getGithub()', () => {
-    it("It Should return the office Number", () => {
+    it("It Should return the Github username", () => {
       const obj = new Engineer("Engineer", "Angela", "123", "test@engineer.com", "angelaDeveloper");
       // console.log(obj.getRole());
       expect(obj.getGithub()).toBeDefined();
