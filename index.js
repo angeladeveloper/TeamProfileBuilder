@@ -33,13 +33,13 @@ inquirerPrompts()
 
 
 function createDom() {
-  fs.writeFileSync("dist/index1.html", '');
+  fs.writeFileSync("dist/index.html", '');
   appendThings();
 }
 
 function appendThings() {
-  // fs.appendFile('./dist/index1.html',html)
-  fs.appendFileSync('dist/index1.html', `
+  // fs.appendFile('./dist/index.html',html)
+  fs.appendFileSync('dist/index.html', `
   <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -63,7 +63,7 @@ function appendThings() {
       <div class="container">
   `)
   for (const member of teamMembers) {
-    fs.appendFileSync('dist/index1.html', `<div class="member-card">
+    fs.appendFileSync('dist/index.html', `<div class="member-card">
     <div class="card-header">
       <h2>
         <img src="/dist/assests/name.png" alt="" />
@@ -93,7 +93,7 @@ function appendThings() {
     </ul>
   </div>`)
   }
-  fs.appendFileSync('dist/index1.html', `
+  fs.appendFileSync('dist/index.html', `
   </div>
   </main>
   </body>
